@@ -3,173 +3,235 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sidonie Dessoubret — Aerospace, Business Development & Cybersecurity</title>
+  <title>Sidonie Dessoubret — Aerospace | BD | Cybersecurity</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg: #0b1220;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --radius: 18px;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #0b1220;
-      color: #e5e7eb;
-      line-height: 1.6;
+      background: var(--bg);
+      color: var(--text);
       margin: 0;
       padding: 0;
+      line-height: 1.6;
     }
+
     header {
-      text-align: center;
-      padding: 40px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(17, 24, 39, 0.85);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
     }
+
     header h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0;
+      font-size: 1.3rem;
+      color: var(--accent);
+      margin: 0;
     }
-    header p {
-      margin: 6px 0;
-      color: #9ca3af;
-    }
-    a {
-      color: #38bdf8;
+
+    nav a {
+      color: var(--text);
+      margin-left: 20px;
       text-decoration: none;
+      opacity: 0.8;
+      font-weight: 500;
     }
-    main {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
+
+    nav a:hover {
+      color: var(--accent);
     }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 10%;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      max-width: 540px;
+    }
+
+    .hero-text h2 {
+      font-size: 2.4rem;
+      margin: 0 0 10px;
+      color: var(--accent);
+    }
+
+    .hero-text p {
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+      margin-top: 24px;
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      background: var(--accent);
+      color: #0b1220;
+      padding: 10px 20px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .btn-outline {
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      background: transparent;
+    }
+
+    .photo-card {
+      width: 320px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .photo-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
     section {
-      margin-bottom: 40px;
+      padding: 40px 10%;
     }
-    h2 {
-      border-bottom: 2px solid #38bdf8;
-      padding-bottom: 5px;
-      font-size: 1.4rem;
+
+    h3 {
+      font-size: 1.6rem;
+      color: var(--accent);
       margin-bottom: 16px;
     }
-    .job {
-      margin-bottom: 20px;
+
+    .exp-item {
+      margin-bottom: 18px;
+      background: var(--card);
+      padding: 18px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(148, 163, 184, 0.1);
     }
-    .job h3 {
+
+    .exp-item h4 {
       margin: 0;
+      color: #e2e8f0;
       font-size: 1.1rem;
-      color: #e0f2fe;
     }
-    .job p {
-      margin: 4px 0;
-      color: #cbd5e1;
+
+    .exp-item p {
+      margin: 6px 0 0;
+      color: var(--muted);
     }
-    ul {
-      margin: 4px 0 10px 18px;
-    }
-    li {
-      margin-bottom: 4px;
-    }
+
     footer {
       text-align: center;
-      color: #94a3b8;
+      padding: 20px;
+      border-top: 1px solid rgba(148, 163, 184, 0.1);
+      color: var(--muted);
       font-size: 0.85rem;
-      padding: 30px 0;
-      border-top: 1px solid #1e293b;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Sidonie Burgelis – Dessoubret</h1>
-    <p>French-American | Aerospace Management | Business Development | Cybersecurity</p>
-    <p>📧 <a href="mailto:dessoubretsidonie@gmail.com">dessoubretsidonie@gmail.com</a> | 
-       🌐 <a href="https://linkedin.com/in/sidoniedessoubret">@sidoniedessoubret</a> | 
-       ☎ +1 (414) 391-8733</p>
+    <h1>Sidonie Dessoubret</h1>
+    <nav>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="mailto:dessoubretsidonie@gmail.com">Contact</a>
+    </nav>
   </header>
 
   <main>
-    <section>
-      <h2>Experience</h2>
-
-      <div class="job">
-        <h3>ADAM Aerospace — Aerospace Defense Strategy</h3>
-        <ul>
-          <li>Applied blockchain to enhance SATCOM security.</li>
-          <li>Led EU international relations and strategy.</li>
-          <li>Coordinated technical operations between back-end and front-end teams.</li>
-        </ul>
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Hi, I'm Sidonie</h2>
+        <p>French-American MSc Aerospace Management student in Toulouse, specializing in business development and cybersecurity for space systems. CDL Space Stream graduate and European Business Developer at ADAM Aerospace.</p>
+        <div class="hero-buttons">
+          <a href="#" class="btn">Download CV</a>
+          <a href="mailto:dessoubretsidonie@gmail.com" class="btn btn-outline">Contact Me</a>
+        </div>
       </div>
-
-      <div class="job">
-        <h3>Creative Destruction Labs — Space Stream</h3>
-        <ul>
-          <li>Graduated from CDL Space Stream focused on SATCOM innovation.</li>
-          <li>Refined business model and ensured regulatory compliance.</li>
-        </ul>
-      </div>
-
-      <div class="job">
-        <h3>University Paris-Saclay — R&D Lead</h3>
-        <ul>
-          <li>Led AI R&D collaboration between U.S. startup and French university teams.</li>
-        </ul>
-      </div>
-
-      <div class="job">
-        <h3>Milwaukee City Internship — Data Science Department</h3>
-        <ul>
-          <li>Interpreted large datasets and analyzed public-sector trends.</li>
-        </ul>
-      </div>
-
-      <div class="job">
-        <h3>ISCOM — Innovation Strategy Internship</h3>
-        <ul>
-          <li>Supported strategic innovation plans focused on inclusivity and digital outreach.</li>
-        </ul>
-      </div>
-
-      <div class="job">
-        <h3>Islands of Brilliance — Special Education Teacher</h3>
-        <ul>
-          <li>Guided students in developing digital and software skills through creative projects.</li>
-        </ul>
-      </div>
-
-      <div class="job">
-        <h3>ForeverBase — Developer</h3>
-        <ul>
-          <li>Developed blockchain-protected medical data software for a DoD-awarded project.</li>
-          <li>Collaborated across technical and stakeholder teams.</li>
-        </ul>
-      </div>
-
-      <div class="job">
-        <h3>Sherlock.AI — Developer</h3>
-        <ul>
-          <li>Co-developed AI source code for a custom GPT and real-time tracking system.</li>
-        </ul>
+      <div class="photo-card">
+        <img src="IMG_5957.JPG" alt="Sidonie working in office">
       </div>
     </section>
 
-    <section>
-      <h2>Education</h2>
-      <ul>
-        <li><strong>MSc Aerospace Management</strong> — TBS Education, Toulouse</li>
-        <li><strong>Bachelor’s in Information Science & Technology</strong> — University of Wisconsin-Milwaukee (Expected 2025)</li>
-        <li><strong>Cybersecurity Certification</strong> — UWM SOIS</li>
-        <li><strong>UniversEH</strong> — Space, Law, Policy & Innovation Program</li>
-      </ul>
+    <section id="experience">
+      <h3>Experience</h3>
+
+      <div class="exp-item">
+        <h4>ADAM Aerospace — Aerospace Defense Strategy</h4>
+        <p>Applied blockchain to enhance SATCOM security. Led EU relations and coordinated cross-functional teams.</p>
+      </div>
+
+      <div class="exp-item">
+        <h4>Creative Destruction Lab — Space Stream</h4>
+        <p>Graduated from CDL Space Stream focused on SATCOM innovation and compliance.</p>
+      </div>
+
+      <div class="exp-item">
+        <h4>University Paris-Saclay — R&D Lead</h4>
+        <p>Led AI R&D collaboration between U.S. and French research teams.</p>
+      </div>
+
+      <div class="exp-item">
+        <h4>ForeverBase / Sherlock.AI — Developer</h4>
+        <p>Developed blockchain-protected medical software and AI-based tracking systems for defense use.</p>
+      </div>
     </section>
 
-    <section>
-      <h2>Skills & Accomplishments</h2>
-      <ul>
-        <li>UW-System Innovation Award for “Insite”</li>
-        <li>Business development & partnership strategy</li>
-        <li>Proposal writing (SBIR, ESA BIC, CDL projects)</li>
-        <li>Satellite communications (SATCOM) & defense tech</li>
-        <li>Space policy & regulation</li>
-        <li>Bilingual: Fluent in English & French</li>
-      </ul>
+    <section id="education">
+      <h3>Education</h3>
+      <div class="exp-item">
+        <h4>MSc Aerospace Management — TBS Education</h4>
+        <p>Specialization in space law, policy, and business innovation.</p>
+      </div>
+      <div class="exp-item">
+        <h4>Bachelor’s in Information Science & Technology — UW Milwaukee</h4>
+        <p>Focus: Systems analysis, data science, cybersecurity, and agile project management.</p>
+      </div>
+      <div class="exp-item">
+        <h4>UniversEH — Space, Law, Policy & Innovation</h4>
+        <p>European Space University alliance program.</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h3>Skills & Accomplishments</h3>
+      <div class="exp-item">
+        <p>• Business development & partnership strategy<br>
+           • Proposal writing (SBIR, ESA BIC, CDL)<br>
+           • Satellite communications (SATCOM) & defense tech<br>
+           • Space policy & regulation<br>
+           • Bilingual: English & French</p>
+      </div>
     </section>
   </main>
 
   <footer>
-    © 2025 Sidonie Dessoubret | Built with ♥ on GitHub Pages
+    © 2025 Sidonie Dessoubret | Built with ❤️ in Toulouse
   </footer>
+
 </body>
 </html>
